@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMERS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('astetic.webp'); /* Cambia 'tu-imagen-de-fondo.jpg' por la URL de tu imagen de fondo */
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #texto-arriba {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        #boton-container {
+            position: relative;
+        }
+
+        .boton {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        #si {
+            background-color: #ca7bacd2; /* Verde */
+            color: white;
+        }
+
+        #no {
+            background-color: #f06392; /* Rosa */
+            color: white;
+            position: absolute;
+        }
+
+        .boton:hover {
+            background-color: #333;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .boton:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <H1><div id="texto-arriba">
+        ¿Quieres salir a comer taquitos conmigo🤭?
+    </div></H1> 
+    <div id="boton-container">
+        <button id="si" class="boton" onclick="agradecer()">Sí</button>
+        <button id="no" class="boton" onclick="moverBotonNo()">No</button>
+    </div>
+
+
+
+    <script>
+        function moverBotonNo() {
+            var botonNo = document.getElementById("no");
+            var maxX = window.innerWidth - botonNo.clientWidth;
+            var maxY = window.innerHeight - botonNo.clientHeight;
+            
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+            
+            botonNo.style.left = newX + "px";
+            botonNo.style.top = newY + "px";
+        }
+
+        function agradecer() {
+            window.location.href = "gracias.html"; // Redirigir a la página de agradecimiento
+        }
+    </script>
+</body>
+</html>

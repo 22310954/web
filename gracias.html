@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimiento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('astetic.webp');
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .animacion {
+            font-size: 36px; /* Tamaño de fuente aumentado */
+            color: #E91E63; /* Rosa pastel */
+            animation: textoAnimado 2s ease infinite alternate, reboteTexto 1s ease infinite alternate;
+        }
+
+        @keyframes textoAnimado {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes reboteTexto {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="animacion">GRACIAS POR ACEPTAR  MI INVITACION💖 </p>
+        
+    </div>
+</body>
+</html>
